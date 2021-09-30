@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+font-family: "spaceage";
+src: local("spaceage"),
+ url("./fonts/spaceage.ttf") format("truetype");
+
+}

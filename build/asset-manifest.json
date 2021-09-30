@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/tbcnft/static/css/main.741ee34a.chunk.css",
-    "main.js": "/tbcnft/static/js/main.ef9012bb.chunk.js",
-    "main.js.map": "/tbcnft/static/js/main.ef9012bb.chunk.js.map",
-    "runtime-main.js": "/tbcnft/static/js/runtime-main.6e67e627.js",
-    "runtime-main.js.map": "/tbcnft/static/js/runtime-main.6e67e627.js.map",
-    "static/js/2.000a2352.chunk.js": "/tbcnft/static/js/2.000a2352.chunk.js",
-    "static/js/2.000a2352.chunk.js.map": "/tbcnft/static/js/2.000a2352.chunk.js.map",
-    "static/js/3.a64233a7.chunk.js": "/tbcnft/static/js/3.a64233a7.chunk.js",
-    "static/js/3.a64233a7.chunk.js.map": "/tbcnft/static/js/3.a64233a7.chunk.js.map",
-    "index.html": "/tbcnft/index.html",
-    "static/css/main.741ee34a.chunk.css.map": "/tbcnft/static/css/main.741ee34a.chunk.css.map",
-    "static/js/2.000a2352.chunk.js.LICENSE.txt": "/tbcnft/static/js/2.000a2352.chunk.js.LICENSE.txt",
-    "static/media/1.75f03515.png": "/tbcnft/static/media/1.75f03515.png",
-    "static/media/reset.css": "/tbcnft/static/media/PressStart2P-Regular.f2341734.woff"
+    "main.css": "/static/css/main.cf2310f1.chunk.css",
+    "main.js": "/static/js/main.77a6468a.chunk.js",
+    "main.js.map": "/static/js/main.77a6468a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.25012c25.js",
+    "runtime-main.js.map": "/static/js/runtime-main.25012c25.js.map",
+    "static/js/2.0c05d079.chunk.js": "/static/js/2.0c05d079.chunk.js",
+    "static/js/2.0c05d079.chunk.js.map": "/static/js/2.0c05d079.chunk.js.map",
+    "static/js/3.80125750.chunk.js": "/static/js/3.80125750.chunk.js",
+    "static/js/3.80125750.chunk.js.map": "/static/js/3.80125750.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.cf2310f1.chunk.css.map": "/static/css/main.cf2310f1.chunk.css.map",
+    "static/js/2.0c05d079.chunk.js.LICENSE.txt": "/static/js/2.0c05d079.chunk.js.LICENSE.txt",
+    "static/media/cancel.b5f9e32e.svg": "/static/media/cancel.b5f9e32e.svg",
+    "static/media/menu.4062f514.svg": "/static/media/menu.4062f514.svg",
+    "static/media/skip.ce3e6e05.svg": "/static/media/skip.ce3e6e05.svg",
+    "static/media/index.css": "/static/media/spaceage.ee424267.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.6e67e627.js",
-    "static/js/2.000a2352.chunk.js",
-    "static/css/main.741ee34a.chunk.css",
-    "static/js/main.ef9012bb.chunk.js"
+    "static/js/runtime-main.25012c25.js",
+    "static/js/2.0c05d079.chunk.js",
+    "static/css/main.cf2310f1.chunk.css",
+    "static/js/main.77a6468a.chunk.js"
   ]
 }

@@ -123,18 +123,14 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "none";
-  src: local("coder"),
-    url(../assets/fonts/PressStart2P-Regular.woff) format("woff");
-}
-
 body {
   margin: 0;
-  font-family: "coder", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", "spaceage", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #181d27;
+  
 }
 
 * {
@@ -150,16 +146,22 @@ code {
 
 body::-webkit-scrollbar {
   display: none;
+  
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  
 }
 
 html {
   background-color: "#4C4C4C";
+  scroll-snap-type: y mandatory;
+  @media (max-width: 768px) {
+      scroll-snap-type: y proximity;
+    }
 }
 
 div {
@@ -169,3 +171,33 @@ div {
   user-select: none;
   -o-user-select: none;
 }
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+  transform-origin: bottom;
+  
+  z-index: 1000;
+  
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  background-color: blue;
+  
+  transform-origin: bottom;
+  
+}
+
+
+
+/*  ////////////// Play Button*/

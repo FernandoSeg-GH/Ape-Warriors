@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Ape Warriors",
+  "name": "A collection of 3,000 Ape Warriors NFT with unique DNA.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "ApeWarriorsNFT.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "ApeWarriorsNFT.png",
       "type": "image/png",
       "sizes": "512x512"
     }

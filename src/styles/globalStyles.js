@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 // Used for wrapping a page component
 export const Screen = styled.div`
-  background-color: var(--black);
-  background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  min-height: 100vh;
+  
+  
+
+
+
   display: flex;
   flex-direction: column;
 `;

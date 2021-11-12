@@ -6,7 +6,7 @@ function Footer() {
         <FooterWrapper>
             <Sub>
                 <p>
-                    2021 - © Ape Warriors is a collection of 3,000 unique collectible Non-Fungible Tokens.
+                © Ape Warriors is a collection of 3,000 unique NFT's<br/>Sponsored by <a style={{textDecoration:"none", color:"rgba(255,255,255,0.5)", paddingTop: "8px"}} href="www.EtonAuction.com">EtonAuction.com</a>
                 </p>
             </Sub>
         </FooterWrapper>
@@ -28,6 +28,11 @@ const FooterWrapper = styled.div`
     right: 50%;
     margin-left: -330px;
     margin-right: -330px;
+    line-height: 20px;
+    p {
+        color: rgba(255,255,255,0.5);
+    }
+
     @media (max-width: 768px) {
         position: fixed;
         width: 320px;

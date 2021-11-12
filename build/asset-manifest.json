@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.cf2310f1.chunk.css",
-    "main.js": "/static/js/main.77a6468a.chunk.js",
-    "main.js.map": "/static/js/main.77a6468a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.25012c25.js",
-    "runtime-main.js.map": "/static/js/runtime-main.25012c25.js.map",
-    "static/js/2.0c05d079.chunk.js": "/static/js/2.0c05d079.chunk.js",
-    "static/js/2.0c05d079.chunk.js.map": "/static/js/2.0c05d079.chunk.js.map",
-    "static/js/3.80125750.chunk.js": "/static/js/3.80125750.chunk.js",
-    "static/js/3.80125750.chunk.js.map": "/static/js/3.80125750.chunk.js.map",
+    "main.css": "/static/css/main.8bf236d8.chunk.css",
+    "main.js": "/static/js/main.9dbe637f.chunk.js",
+    "main.js.map": "/static/js/main.9dbe637f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c004a5aa.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c004a5aa.js.map",
+    "static/js/2.2d8154f6.chunk.js": "/static/js/2.2d8154f6.chunk.js",
+    "static/js/2.2d8154f6.chunk.js.map": "/static/js/2.2d8154f6.chunk.js.map",
+    "static/js/3.2f5ad3e9.chunk.js": "/static/js/3.2f5ad3e9.chunk.js",
+    "static/js/3.2f5ad3e9.chunk.js.map": "/static/js/3.2f5ad3e9.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.cf2310f1.chunk.css.map": "/static/css/main.cf2310f1.chunk.css.map",
-    "static/js/2.0c05d079.chunk.js.LICENSE.txt": "/static/js/2.0c05d079.chunk.js.LICENSE.txt",
+    "static/css/main.8bf236d8.chunk.css.map": "/static/css/main.8bf236d8.chunk.css.map",
+    "static/js/2.2d8154f6.chunk.js.LICENSE.txt": "/static/js/2.2d8154f6.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/spaceage.ee424267.ttf",
     "static/media/cancel.b5f9e32e.svg": "/static/media/cancel.b5f9e32e.svg",
     "static/media/menu.4062f514.svg": "/static/media/menu.4062f514.svg",
-    "static/media/skip.ce3e6e05.svg": "/static/media/skip.ce3e6e05.svg",
-    "static/media/index.css": "/static/media/spaceage.ee424267.ttf"
+    "static/media/skip.ce3e6e05.svg": "/static/media/skip.ce3e6e05.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.25012c25.js",
-    "static/js/2.0c05d079.chunk.js",
-    "static/css/main.cf2310f1.chunk.css",
-    "static/js/main.77a6468a.chunk.js"
+    "static/js/runtime-main.c004a5aa.js",
+    "static/js/2.2d8154f6.chunk.js",
+    "static/css/main.8bf236d8.chunk.css",
+    "static/js/main.9dbe637f.chunk.js"
   ]
 }

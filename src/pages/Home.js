@@ -44,7 +44,6 @@ const HomeWrapper = styled.div`
 `
     
     const Snap = styled.div`
-    scroll-snap-align: start;
     width: 100vw;
     height: 100vh;
     @media (max-width: 768px) {

@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0
+// SPDX-License-Identifier: MIT
 
 // File: @openzeppelin/contracts/utils/introspection/IERC165.sol
 pragma solidity ^0.8.0;
@@ -1217,27 +1217,28 @@ abstract contract Ownable is Context {
     }
 }
 
-
-pragma solidity ^0.8.0;
+pragma solidity >=0.7.0 <0.9.0;
 
 contract ApeWarriors is ERC721Enumerable, Ownable {
   using Strings for uint256;
 
-  string public baseURI;
+  string baseURI;
   string public baseExtension = ".json";
-  uint256 public cost = 10 ether;
+  uint256 public cost = 50 ether;
   uint256 public maxSupply = 3000;
-  uint256 public maxMintAmount = 12;
+  uint256 public maxMintAmount = 9;
   bool public paused = false;
-  mapping(address => bool) public whitelisted;
+  bool public revealed = false;
+  string public notRevealedUri;
 
   constructor(
     string memory _name,
     string memory _symbol,
-    string memory _initBaseURI 
+    string memory _initBaseURI,
+    string memory _initNotRevealedUri
   ) ERC721(_name, _symbol) {
     setBaseURI(_initBaseURI);
-    mint(msg.sender, 12);
+    setNotRevealedURI(_initNotRevealedUri);
   }
 
   // internal
@@ -1246,7 +1247,7 @@ contract ApeWarriors is ERC721Enumerable, Ownable {
   }
 
   // public
-  function mint(address _to, uint256 _mintAmount) public payable {
+  function mint(uint256 _mintAmount) public payable {
     uint256 supply = totalSupply();
     require(!paused);
     require(_mintAmount > 0);
@@ -1254,13 +1255,11 @@ contract ApeWarriors is ERC721Enumerable, Ownable {
     require(supply + _mintAmount <= maxSupply);
 
     if (msg.sender != owner()) {
-        if(whitelisted[msg.sender] != true) {
-          require(msg.value >= cost * _mintAmount);
-        }
+      require(msg.value >= cost * _mintAmount);
     }
 
     for (uint256 i = 1; i <= _mintAmount; i++) {
-      _safeMint(_to, supply + i);
+      _safeMint(msg.sender, supply + i);
     }
   }
 
@@ -1288,6 +1287,10 @@ contract ApeWarriors is ERC721Enumerable, Ownable {
       _exists(tokenId),
       "ERC721Metadata: URI query for nonexistent token"
     );
+    
+    if(revealed == false) {
+        return notRevealedUri;
+    }
 
     string memory currentBaseURI = _baseURI();
     return bytes(currentBaseURI).length > 0
@@ -1296,12 +1299,20 @@ contract ApeWarriors is ERC721Enumerable, Ownable {
   }
 
   //only owner
-  function setCost(uint256 _newCost) public onlyOwner() {
+  function reveal() public onlyOwner {
+      revealed = true;
+  }
+  
+  function setCost(uint256 _newCost) public onlyOwner {
     cost = _newCost;
   }
 
-  function setmaxMintAmount(uint256 _newmaxMintAmount) public onlyOwner() {
+  function setmaxMintAmount(uint256 _newmaxMintAmount) public onlyOwner {
     maxMintAmount = _newmaxMintAmount;
+  }
+  
+  function setNotRevealedURI(string memory _notRevealedURI) public onlyOwner {
+    notRevealedUri = _notRevealedURI;
   }
 
   function setBaseURI(string memory _newBaseURI) public onlyOwner {
@@ -1316,14 +1327,6 @@ contract ApeWarriors is ERC721Enumerable, Ownable {
     paused = _state;
   }
  
- function whitelistUser(address _user) public onlyOwner {
-    whitelisted[_user] = true;
-  }
- 
-  function removeWhitelistUser(address _user) public onlyOwner {
-    whitelisted[_user] = false;
-  }
-
   function withdraw() public payable onlyOwner {
     require(payable(msg.sender).send(address(this).balance));
   }

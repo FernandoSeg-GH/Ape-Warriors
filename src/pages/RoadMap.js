@@ -23,7 +23,7 @@ function RoadMap() {
                       img="https://res.cloudinary.com/devops-imgcloud/image/upload/v1632516647/apewarriors/giphy_ngm4r0.webp" 
                       chapter="Chapter 01" 
                       title="Ape Warriors Activation"
-                      content={`Minting 3,000 NFT Ape Warriors with unique DNA, some with exclusive rare traits. Your Ape Warriors are just the start of the Space Ape Army mission*.`}/>
+                      content={`Minting 3,000 NFT Ape Warriors with unique DNA, some with exclusive rare traits. Your Ape Warrior is just the start of the Space Ape Army mission in the metaverse.`}/>
                   <RoadMapItem
                       
                       img="https://res.cloudinary.com/devops-imgcloud/image/upload/v1632511302/apewarriors/giphy_fqf1cv.gif" 
@@ -42,8 +42,8 @@ function RoadMap() {
                   <RoadMapItem 
                       img="https://res.cloudinary.com/devops-imgcloud/image/upload/v1632458321/apewarriors/japan-aesthetic_qh8s7o.gif" 
                       chapter="Chapter 04" 
-                      title="Launch Ape Warriors DAPP Blockchain Game"
-                      content="100% decentralized and functional Blockchain Game. Players can mint new assets, and participate in the Space Battlefield trading arena."/>
+                      title="Launch Ape Warriors DAPP Metaverse Kit"
+                      content="100% decentralized and functional Blockchain assets. Players can mint new assets, and participate in the Space Battlefield trading arena."/>
                   <RoadMapItem 
                       img="https://res.cloudinary.com/devops-imgcloud/image/upload/v1632439991/apewarriors/AridInferiorGnat-size_restricted_hfb50m.gif" 
                       chapter="Chapter 05" 

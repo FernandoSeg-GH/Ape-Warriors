@@ -9,3 +9,10 @@ src: local("spaceage"),
  url("./fonts/spaceage.ttf") format("truetype");
 
 }
+
+@font-face {
+    font-family: "Roboto";
+    src: local("roboto"),
+     url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+    
+    }

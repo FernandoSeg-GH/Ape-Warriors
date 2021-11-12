@@ -34,8 +34,6 @@ const ButtonRndWrapper = styled.button`
     margin: 60px 0;
     :hover {
         transition: 1s ease-out;
-        background-color: #D8C303;
-        color: #181d27;
-        font-size: 24px;
+        background-color: black;
     }
 `

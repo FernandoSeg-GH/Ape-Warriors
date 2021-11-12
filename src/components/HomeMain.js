@@ -1,19 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Stars from './Stars'
 import styled from 'styled-components'
 import NFT from './NFT'
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { fetchData } from "../redux/data/dataActions";
 
 function HomeMain() {
+    const dispatch = useDispatch();
+    const blockchain = useSelector((state) => state.blockchain);
+    const data = useSelector((state) => state.data);
+
+    const getData = () => {
+        if (blockchain.account !== "" && blockchain.smartContract !== null) {
+          dispatch(fetchData(blockchain.account));
+        }
+      };
+      
+      useEffect(() => {
+        getData();
+      }, [blockchain.account]);
+
     return (
         <HomeMainWrapper id="main">
             
             <MintMain>
                 <HomeMainContent>
-                        <h1 style={{fontFamily:"spaceage", marginBottom:"20px"}}>Welcome to the Space Ape Warriors <br/>Command Station.</h1>
-                        <p>Every Ape Warrior is one of a kind. We lost a battle but not the war.</p>
-                        <p>Only <span style={{fontFamily:"roboto-bold"}}>3,000</span> units survived and are now in sleep recovery mode.</p>
-                        <p>It is your duty to activate a unit by minting it.</p>
-                  
+                        <h1 style={{fontFamily:"spaceage", marginBottom:"20px"}}>Welcome to the Command Station.</h1>   
+                        { blockchain.account &&
+                            <p style={{fontFamily:"spaceage"}}>Only <span style={{fontFamily:"spaceage"}}>{data.totalSupply}/3000</span> units left to activate.</p>                  
+                        }
                         <div className="wrapper">
                             <div className="typing-demo0101" style={{ marginTop:"30px"}}>
                                 <p  style={{fontFamily:"spaceage"}}>Our Warriors Await for your orders...</p>
@@ -45,7 +61,7 @@ export default HomeMain
 
 
 const HomeMainWrapper = styled.div`
-    scroll-snap-align: start;
+    // scroll-snap-align: start;
     font-size: 28px;
     height: 100vh;
     width: 100vw;
@@ -84,9 +100,7 @@ const MintMain = styled.div`
     -webkit-backdrop-filter: blur( 4px );
     padding: 40px;
     z-index: 10;
-    
     p {
-      font-family: roboto-thin;
       
     }
     @media (max-width: 768px) {

@@ -10,7 +10,7 @@ function WarriorActivation() {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
-  const [feedback, setFeedback] = useState("Will your Ape Warrior be on the top tier?");
+  const [feedback, setFeedback] = useState("Reserve your Ape Warrior for the metaverse war.");
   const [claimingNft, setClaimingNft] = useState(false);
 
   const claimNFTs = (_amount) => {
@@ -23,9 +23,9 @@ function WarriorActivation() {
       .mint(blockchain.account, _amount)
       .send({
         gasLimit: "285000",
-        to: "0x6f6a0BE20E9Ca2c492E2242B2B0Df40E9EAE83F7",
+        to: "0x679CA329997f0e3cB5A578FA0959456FFEf4f6b6",
         from: blockchain.account,
-        value: blockchain.web3.utils.toWei((10 * _amount).toString(), "MATIC"),
+        value: blockchain.web3.utils.toWei((50 * _amount).toString(), "ether"),
       })
       .once("error", (err) => {
         console.log(err);
@@ -46,7 +46,7 @@ function WarriorActivation() {
       dispatch(fetchData(blockchain.account));
     }
   };
-
+  
   useEffect(() => {
     getData();
   }, [blockchain.account]);
@@ -91,12 +91,10 @@ function WarriorActivation() {
               <Presale>
                 
                 <PresaleSub>
-                  <h1 style={{marginBottom:"18px"}}>
-                    There are {data.totalSupply}/3000 Ape Warriors left to activate
-                  </h1>
-                  <p>Minting Cost: 10 MATIC</p>
+                 
                   <p style={{margin:"6px 0", marginBottom:"20px"}}>Activating 1 Space Warrior is a complex brew.</p>
                   <p>{feedback}</p>
+                  <p style={{fontFamily:"spaceage", fontWeight:"400", margin:"40px auto", marginBottom:"-20px", borderBottom:"1px solid rgba( 255, 255, 255, 0.2 )", maxWidth:"480px",padding:"20px"}}>Minting Cost: 50 MATIC</p>
                 </PresaleSub>
                 <s.SpacerXSmall />
                 <div>
@@ -140,6 +138,9 @@ function WarriorActivation() {
                     >
                       {claimingNft ? "Activating your Warrior..." : "Buy 1 Ape Warrior NFT"}
                     </Validate>
+                    <h1>
+                    There are {data.totalSupply}/3000 Ape Warriors left to activate.
+                  </h1>
                   </div>
                 )}
               </Presale>
@@ -282,6 +283,7 @@ const MintMain = styled.div`
       font-family: roboto-thin;
     }
     
+    scroll-snap-align: none;
     @media (max-width: 768px) {
         scroll-snap-align: none;
         width: 90vw;
